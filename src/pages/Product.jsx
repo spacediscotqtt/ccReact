@@ -70,13 +70,6 @@ const FilterGenre = styled.div`
   cursor: pointer;
 `;
 
-const FilterBrand = styled.select`
-  margin-left: 10px;
-  padding: 5px;
-`;
-
-const FilterBrandOption = styled.option``;
-
 const AddContainer = styled.div`
   width: 50%;
   display: flex;
@@ -163,14 +156,6 @@ const Product = () => {
               {product.genre?.map((c) => (
                 <FilterGenre genre={c} key={c} onClick={() => setGenre(c)} />
               ))}
-            </Filter>
-            <Filter>
-              <FilterTitle>Brand</FilterTitle>
-              <FilterBrand onChange={(e) => setBrand(e.target.value)}>
-                {product.brand?.map((s) => (
-                  <FilterBrandOption key={s}>{s}</FilterBrandOption>
-                ))}
-              </FilterBrand>
             </Filter>
           </FilterContainer>
           <AddContainer>
