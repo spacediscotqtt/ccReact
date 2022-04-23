@@ -3,7 +3,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Link,useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {getUser, resetUserSession} from '../redux/AuthService';
 
 
