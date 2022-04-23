@@ -134,7 +134,7 @@ const Product = () => {
 
   const handleClick = () => {
     dispatch(
-      addProduct({ ...product, quantity, genre, brand })
+      addProduct({ ...product, quantity, genre})
     );
   };
   return (
