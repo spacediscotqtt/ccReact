@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import axios from "axios"
 import {useHistory} from 'react-router-dom';
 
@@ -64,7 +64,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching} = useSelector((state) => state.user);
   const history = useHistory();
 
   const submitHandler = (e) => {

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import {setUserSession} from '../redux/AuthService';
-import { useDispatch, useSelector } from "react-redux";
 import {Link,useHistory} from 'react-router-dom';
 import axios from "axios";
 
@@ -59,22 +58,10 @@ const Button = styled.button`
   }
 `;
 
-const link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
-const Error = styled.span`
-  color: red;
-`;
-
-const Login = (props) => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
-  const dispatch = useDispatch();
 
   const history = useHistory();
 

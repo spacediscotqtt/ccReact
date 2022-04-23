@@ -81,7 +81,6 @@ const Navbar = () => {
   console.log("test");
   const quantity = useSelector(state=>state.cart.quantity)
   let condLg,condRg, condCt, condNm;
-  const history = useHistory();
 
 
   const logoutHandler = () => {
