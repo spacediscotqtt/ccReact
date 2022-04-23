@@ -19,8 +19,8 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `http://44.203.163.253:9447/api/products?category=${cat}`
-            : "http://44.203.163.253:9447/api/products"
+            ? `https://cert-manager.cheapestdomainname.services/api/products?category=${cat}`
+            : "https://cert-manager.cheapestdomainname.services/api/products"
         );
         setProducts(res.data);
       } catch (err) {}
