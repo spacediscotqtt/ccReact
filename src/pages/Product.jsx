@@ -112,7 +112,6 @@ const Product = () => {
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [genre, setGenre] = useState("");
-  const [brand, setBrand] = useState("");
   const dispatch = useDispatch();
 
   useEffect(() => {
