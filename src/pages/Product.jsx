@@ -9,10 +9,26 @@ import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 import {
+  EmailShareButton,
   FacebookShareButton,
   WhatsappShareButton,
+  TwitterShareButton,
+  PinterestShareButton,
+  LineShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  ViberShareButton,
+  EmailIcon,
   WhatsappIcon,
   FacebookIcon,
+  TwitterIcon,
+  PinterestIcon,
+  LineIcon,
+  RedditIcon,
+  TelegramIcon,
+  TumblrIcon,
+  ViberIcon
 } from 'react-share';
 
 const Container = styled.div``;
@@ -154,6 +170,80 @@ const Product = () => {
           <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
+        <EmailShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <EmailIcon size={40} round={true} />
+        </EmailShareButton>
+
+           <FacebookShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <FacebookIcon size={40} round={true} />
+        </FacebookShareButton>
+        <TwitterShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <TwitterIcon size={40} round={true} />
+        </TwitterShareButton>
+
+        <PinterestShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <PinterestIcon size={40} round={true} />
+        </PinterestShareButton>
+
+        <WhatsappShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <WhatsappIcon size={40} round={true} />
+        </WhatsappShareButton>
+
+        <LineShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <LineIcon size={40} round={true} />
+        </LineShareButton>
+        <RedditShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <RedditIcon size={40} round={true} />
+        </RedditShareButton>
+        <TelegramShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <TelegramIcon size={40} round={true} />
+        </TelegramShareButton>
+        <TumblrShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <TumblrIcon size={40} round={true} />
+        </TumblrShareButton>
+        <ViberShareButton
+          url={shareUrl}
+          quote={'bought this from BookSwap'}
+          hashtag={'#shopping'}
+        >
+          <ViberIcon size={40} round={true} />
+        </ViberShareButton>
           <Title>{product.title}</Title>
           <Desc>{product.desc}</Desc>
           <Price>$ {product.price}</Price>
@@ -173,21 +263,6 @@ const Product = () => {
             </AmountContainer>
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
-           <FacebookShareButton
-          url={shareUrl}
-          quote={'Title or jo bhi aapko likhna ho'}
-          hashtag={'#portfolio...'}
-        >
-          <FacebookIcon size={40} round={true} />
-        </FacebookShareButton>
-
-        <WhatsappShareButton
-          url={shareUrl}
-          quote={'Title or jo bhi aapko likhna ho'}
-          hashtag={'#portfolio...'}
-        >
-          <WhatsappIcon size={40} round={true} />
-        </WhatsappShareButton>
         </InfoContainer>
       </Wrapper>
       <Footer />

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  deployment-prod: 
+    context: .
+    dockerfile: Dockerfile
+  ports:
+    - '80:80'
