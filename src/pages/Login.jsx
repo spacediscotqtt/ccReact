@@ -13,7 +13,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg")
+    url("https://imagestorageforcc.s3.amazonaws.com/loginpage.jpeg")
       center;
   background-size: cover;
   display: flex;

@@ -60,6 +60,7 @@ const ProductList = () => {
             <Option>Math</Option>
             <Option>English</Option>
             <Option>History</Option>
+            <Option>N/A</Option>
           </Select>
           <Select name="brand" onChange={handleFilters}>
             <Option disabled>Brand</Option>
@@ -67,6 +68,7 @@ const ProductList = () => {
             <Option>Microsoft</Option>
             <Option>BIC</Option>
             <Option>MUJI</Option>
+            <Option>N/A</Option>
           </Select>
         </Filter>
         <Filter>

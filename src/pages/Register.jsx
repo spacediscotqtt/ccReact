@@ -13,7 +13,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    url("https://imagestorageforcc.s3.amazonaws.com/slider+image+1.webp")
       center;
   background-size: cover;
   display: flex;
