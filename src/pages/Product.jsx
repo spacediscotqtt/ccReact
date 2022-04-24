@@ -8,6 +8,12 @@ import { useEffect, useState } from "react";
 import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
+import {
+  FacebookShareButton,
+  WhatsappShareButton,
+  WhatsappIcon,
+  FacebookIcon,
+} from 'react-share';
 
 const Container = styled.div``;
 
@@ -113,6 +119,8 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [genre, setGenre] = useState("");
   const dispatch = useDispatch();
+  const shareUrl = useLocation();
+  console.log(shareUrl);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -151,7 +159,7 @@ const Product = () => {
           <Price>$ {product.price}</Price>
           <FilterContainer>
             <Filter>
-              <FilterTitle>Genre</FilterTitle>
+              <FilterTitle>Genre: {product.genre}</FilterTitle>
               {product.genre?.map((c) => (
                 <FilterGenre genre={c} key={c} onClick={() => setGenre(c)} />
               ))}
@@ -165,6 +173,21 @@ const Product = () => {
             </AmountContainer>
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
+           <FacebookShareButton
+          url={shareUrl}
+          quote={'Title or jo bhi aapko likhna ho'}
+          hashtag={'#portfolio...'}
+        >
+          <FacebookIcon size={40} round={true} />
+        </FacebookShareButton>
+
+        <WhatsappShareButton
+          url={shareUrl}
+          quote={'Title or jo bhi aapko likhna ho'}
+          hashtag={'#portfolio...'}
+        >
+          <WhatsappIcon size={40} round={true} />
+        </WhatsappShareButton>
         </InfoContainer>
       </Wrapper>
       <Footer />

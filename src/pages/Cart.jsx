@@ -8,6 +8,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import {PayPalButtons} from '@paypal/react-paypal-js';
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -187,7 +188,7 @@ const Cart = () => {
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECK OUT WITH STRIPE</TopButton>
+          <TopButton type="filled">CHECK OUT</TopButton>
         </Top>
         <Bottom>
           <Info>
@@ -250,8 +251,9 @@ const Cart = () => {
               token={onToken}
               stripeKey={KEY}
             >
-              <Button>CHECKOUT NOW</Button>
+              <Button>CHECKOUT WITH STRIPE</Button>
             </StripeCheckout>
+            <PayPalButtons style={{ layout: "horizontal" }} />
           </Summary>
         </Bottom>
       </Wrapper>

@@ -12,11 +12,13 @@ import {
 } from "react-router-dom";
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
+import {PayPalScriptProvider} from "@paypal/react-paypal-js"
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
   return (
     <Router>
+      <PayPalScriptProvider options={{ "client-id": "AZNkf83ly9F9U4wjt_1FcORPFEaBD2cEJaQelNZqF4KvjwVkQZrkyKiXhAwjgyrMEyl1nYZQ6QghrQPr" }}>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -38,6 +40,7 @@ const App = () => {
           {user ? <Redirect to="/" /> : <Register />}
         </Route>
       </Switch>
+      </PayPalScriptProvider>
     </Router>
   );
 };
