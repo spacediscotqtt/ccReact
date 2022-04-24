@@ -119,7 +119,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [genre, setGenre] = useState("");
   const dispatch = useDispatch();
-  const shareUrl = useLocation();
+  const shareUrl = window.location.href;
   console.log(shareUrl);
 
   useEffect(() => {
