@@ -1,1 +1,1 @@
-for my cloud computing project
+Front end application using amazon web services for cloud computing project
